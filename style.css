@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(31, 30, 30, 0.301);
+}
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Flip-card animation */
+.area {
+    max-width: 1350px;
+    /* height: 100%; */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 186px;
+    height: 290px;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+
+.front-face, 
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.flip .front-face {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.flip .back-face {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+}
+/* -------------- */
+
+/* Total */
+.total {
+    display: none;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    color: rgb(253, 62, 62);
+    background-color:rgba(157, 249, 249, 0.8);
+    padding: 10px 20px;
+}
+/* ----------------- */
+
+
+/* ------ Модальное окно с кнопкой старт*/
+
+#modal-wrapper {
+    opacity: 1;
+    transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -moz-transition: opacity 1.5s;
+    -ms-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+}
+
+#modal-wrapper.fade-out {
+    opacity: 0;
+}
+
+.modal-overlay {
+    width: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.name-game, .btn-start {
+    color: white;
+    font-size: 52px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.btn-start {
+    margin-top: 150px;
+    font-size: 42px;
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    color: rgb(253, 62, 62);
+}
+
+.btn-start:hover {
+    font-size: 46px;
+    color: rgb(251, 55, 55);
+
+}
+
+.btn-start:active {
+    font-size: 48px;
+}
+
+.reload {
+    color: rgb(247, 74, 74);
+    background-color: rgb(255, 255, 255);
+    padding: 0px 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.reload:hover {
+    color:brown;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.reload:active {
+    color: rgb(140, 137, 137);
+}
