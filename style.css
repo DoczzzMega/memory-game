@@ -18,7 +18,7 @@ body {
 
 /* Flip-card animation */
 .area {
-    width: 80%;
+    max-width: 1350px;
     /* height: 100%; */
     /* position: absolute;
     top: 0;
